@@ -1,0 +1,27 @@
+﻿
+
+@using System.Xml.Linq
+@using pazzaglini.federico._5h.xmlWebAddRecord.Models
+@using pazzaglini.federico._5h.xmlWebAddRecord.Controllers
+
+  @model IEnumerable<persona>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.ActionLink("Edit", "Edit", new { id = Model.ID })
+
+
+<table class="table table-hover">
+    @foreach (persona p in Model)
+        {
+            <tr @p.Stato>
+                <td>@p.Nome</td>
+                <td>@p.Cognome</td>
+            </tr>
+            }
+     
+
+</table>   
